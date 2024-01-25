@@ -1,3 +1,4 @@
+import BatteryReplacement from "@/components/ServicesTiles/BatteryReplacement";
 import Container from "@/components/ui/Container";
 
 const ServicesSection = () => {
@@ -12,7 +13,7 @@ const ServicesSection = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-5">
-        <div className="bg-red-600 h-[515px] rounded-2xl col-span-12"></div>
+        <BatteryReplacement></BatteryReplacement>
         <div className="bg-red-600 h-[515px] rounded-2xl col-span-6 lg:col-span-5"></div>
         <div className="bg-red-600 h-[515px] rounded-2xl col-span-6 lg:col-span-7"></div>
         <div className="bg-red-600 h-[515px] rounded-2xl col-span-12"></div>

@@ -1,4 +1,4 @@
-import { getProducts } from "@/api/admin/product/product.api";
+import { useGetProducts } from "@/api/admin/product/product.hook";
 import Container from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,31 +10,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useQuery } from "@tanstack/react-query";
 import { Trash2 } from "lucide-react";
 
 const ServicesList = () => {
-  const {
-    data: products,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["products"], // put a unique key.
-    queryFn: getProducts,
-    select: (data) => {
-      const products = data.slice(0, 3).map((item) => ({
-        id: item._id,
-        name: item.productName,
-        description: item.productDescription,
-        price: item.productPrice,
-      }));
-
-      return products;
-    },
-  });
+  const { data: products, isLoading, isError } = useGetProducts();
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <p>Loading...</p>;
   }
 
   if (isError) {

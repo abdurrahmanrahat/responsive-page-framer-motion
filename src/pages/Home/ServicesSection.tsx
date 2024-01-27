@@ -1,4 +1,6 @@
 import BatteryReplacement from "@/components/ServicesTiles/BatteryReplacement";
+import ChipsetReplacement from "@/components/ServicesTiles/ChipsetReplacement";
+import DataRecovery from "@/components/ServicesTiles/DataRecovery";
 import Container from "@/components/ui/Container";
 
 const ServicesSection = () => {
@@ -14,8 +16,8 @@ const ServicesSection = () => {
 
       <div className="grid grid-cols-12 gap-5">
         <BatteryReplacement></BatteryReplacement>
-        <div className="bg-red-600 h-[515px] rounded-2xl col-span-6 lg:col-span-5"></div>
-        <div className="bg-red-600 h-[515px] rounded-2xl col-span-6 lg:col-span-7"></div>
+        <ChipsetReplacement></ChipsetReplacement>
+        <DataRecovery></DataRecovery>
         <div className="bg-red-600 h-[515px] rounded-2xl col-span-12"></div>
         <div className="bg-red-600 h-[515px] rounded-2xl col-span-12 md:col-span-6 lg:col-span-4"></div>
         <div className="bg-red-600 h-[515px] rounded-2xl col-span-12 md:col-span-6 lg:col-span-4"></div>
